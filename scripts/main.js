@@ -28,10 +28,10 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     y += dy;
 
     //check to see if we're off the edge
-    if (x > canvas.width || x<0) {
+    if (x + dx > canvas.width - ballRadius || x + dx <ballRadius) {
         dx = -dx;
     }
-    if(y > canvas.height || y<0) {
+    if(y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
         dy= -dy;
     }
 }
