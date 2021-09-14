@@ -7,15 +7,19 @@ let y = canvas.height-30;
 let dx = 2;
 let dy = -2;
 
-function draw() {
-    // clear the canvas
-ctx.clearRect(0,0,canvas.width,canvas.height);
-    //drawing code
+function drawBall(){
     ctx.beginPath()
     ctx.arc(x,y,10,0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
+}
+function draw() {
+    // clear the canvas
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+    //drawing code
+    drawBall();
 
     // change the x and y values for the ball
     x += dx;
