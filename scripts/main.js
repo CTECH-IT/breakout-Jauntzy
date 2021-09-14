@@ -7,9 +7,11 @@ let y = canvas.height-30;
 let dx = 2;
 let dy = -2;
 
+let ballRadius = 10;
+
 function drawBall(){
     ctx.beginPath()
-    ctx.arc(x,y,10,0, Math.PI*2);
+    ctx.arc(x,y,ballRadius,0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
@@ -24,5 +26,13 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     // change the x and y values for the ball
     x += dx;
     y += dy;
+
+    //check to see if we're off the edge
+    if (x > canvas.width || x<0) {
+        dx = -dx;
+    }
+    if(y > canvas.height || y<0) {
+        dy= -dy;
+    }
 }
 setInterval(draw,10);
