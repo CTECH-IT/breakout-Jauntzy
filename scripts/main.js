@@ -8,6 +8,8 @@ let dx = 2;
 let dy = -2;
 
 function draw() {
+    // clear the canvas
+ctx.clearRect(0,0,canvas.width,canvas.height);
     //drawing code
     ctx.beginPath()
     ctx.arc(x,y,10,0, Math.PI*2);
