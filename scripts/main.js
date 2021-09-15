@@ -24,12 +24,12 @@ function drawBall(){
     ctx.closePath();
 }
 
-function drawpaddle() {
+function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleheight);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
-    ctx.closePath9();
+    ctx.closePath();
 }
 
 
@@ -60,8 +60,8 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
         paddleX -= 7;
     }
 
-    drawpaddle();
-    
+    drawPaddle();
+
 }
 
 function keyDownHandler(e){
