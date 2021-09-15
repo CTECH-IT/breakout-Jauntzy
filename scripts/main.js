@@ -49,9 +49,19 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     if (x + dx > canvas.width - ballRadius || x + dx <ballRadius) {
         dx = -dx;
     }
-    if(y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-        dy= -dy;
+    if (y + dy < ballRadius) { // ceiling check
+        dy = -dy;
+    } else if (y + dy > canvas.height-ballRadius) {//floor check
+        if(x > paddleX && x , paddleX + paddleWidth) {//paddle check
+            dy = -dy;
+        } else {//it hit the floor!
+        alert("GAME OVER");
+        document.location.reload();
+        clearInterval(interval); //Needed for browser to end game
+        }
     }
+
+    
 
     // paddle controls
     if(rightPressed) {
@@ -66,8 +76,6 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
             paddleX = 0;
         }
     }
-
-    
 
 }
 
@@ -91,5 +99,5 @@ function keyUpHandler(e){
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
-setInterval(draw,10);
+ let interval = setInterval(draw, 10);
 
