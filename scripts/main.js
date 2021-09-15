@@ -52,7 +52,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     if (y + dy < ballRadius) { // ceiling check
         dy = -dy;
     } else if (y + dy > canvas.height-ballRadius) {//floor check
-        if(x > paddleX && x , paddleX + paddleWidth) {//paddle check
+        if(x > paddleX && x < paddleX + paddleWidth) {//paddle check
             dy = -dy;
         } else {//it hit the floor!
         alert("GAME OVER");
