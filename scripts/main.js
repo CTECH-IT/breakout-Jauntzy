@@ -51,12 +51,31 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     if(y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
         dy= -dy;
     }
-}
 
+    // paddle controls
+    if(rightpressed) {
+        paddleX +=7;
+    }
+    else if(leftpressed) {
+        paddleX -= 7;
+    }
+
+    drawpaddle();
+    
+}
 
 function keyDownHandler(e){
     if(e.key == "Right" || e.key == "Arrowright"){
         rightPressed = true;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft"){
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e){
+    if(e.key == "Right" || e.key =="ArrowRight"){
+        rightPressed = false;
     }
     else if(e.key == "Left" || e.key == "ArrowLeft"){
         leftPressed = false;
