@@ -66,7 +66,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
 }
 
 function keyDownHandler(e){
-    if(e.key == "Right" || e.key == "Arrowright"){
+    if(e.key == "Right" || e.key == "ArrowRight"){
         rightPressed = true;
     }
     else if(e.key == "Left" || e.key == "ArrowLeft"){
