@@ -54,10 +54,10 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     }
 
     // paddle controls
-    if(rightpressed) {
+    if(rightPressed) {
         paddleX +=7;
     }
-    else if(leftpressed) {
+    else if(leftPressed) {
         paddleX -= 7;
     }
 
