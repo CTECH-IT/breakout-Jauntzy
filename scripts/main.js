@@ -162,7 +162,7 @@ function drawScore() {
 function drawLives() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: " + lives, 50, 20);
+    ctx.fillText("Lives: " + lives, 100, 20);
 }
 function keyUpHandler(e){
     if(e.key == "Right" || e.key =="ArrowRight"){
