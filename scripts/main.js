@@ -80,6 +80,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     drawPaddle();
     collisionDetection();
     drawScore();
+    drawLives();
     
 
     // change the x and y values for the ball
@@ -157,6 +158,11 @@ function drawScore() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Score: " + score, 8, 20);
+}
+function drawLives() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Lives: " + lives, 50, 20);
 }
 function keyUpHandler(e){
     if(e.key == "Right" || e.key =="ArrowRight"){
