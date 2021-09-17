@@ -26,6 +26,8 @@ let brickOffsetLeft = 30;
 
 let score = 0;
 
+let lives = 3;
+
 // set up a 2-dimensional array for the bricks
 let bricks = [];
 for (let c=0; c < brickColumnCount; c++) {
@@ -78,6 +80,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     drawPaddle();
     collisionDetection();
     drawScore();
+    drawLives();
 
     // change the x and y values for the ball
     x += dx;
@@ -93,6 +96,9 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
         if(x > paddleX && x < paddleX + paddleWidth) {//paddle check
             dy = -dy;
         } else {//it hit the floor!
+        lives--;
+        }
+        if (lives == 0) {
         alert("GAME OVER");
         document.location.reload();
         clearInterval(interval); //Needed for browser to end game
