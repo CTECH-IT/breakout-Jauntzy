@@ -80,7 +80,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
     drawPaddle();
     collisionDetection();
     drawScore();
-    drawLives();
+    
 
     // change the x and y values for the ball
     x += dx;
