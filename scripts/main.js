@@ -10,7 +10,7 @@ let dy = -2;
 let ballRadius = 10;
 
 let paddleHeight = 10;
-let paddleWidth = 75;
+let paddleWidth = 80;
 let paddleX = (canvas.width-paddleWidth) / 2;
 
 let rightPressed = false;
@@ -166,8 +166,8 @@ function keyUpHandler(e){
 
 function mouseMoveHandler(e) {
     let relativeX = e.clientX - canvas.offsetLeft;
-    if (relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth / 3;
+    if (relativeX > 40 && relativeX < canvas.width) {
+        paddleX = relativeX - paddleWidth / 2;
     }
 }
 document.addEventListener("keydown", keyDownHandler, false);
