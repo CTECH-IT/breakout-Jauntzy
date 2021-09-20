@@ -97,8 +97,8 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
         if(x > paddleX && x < paddleX + paddleWidth) {//paddle check
             dy = -dy;
         } else {//it hit the floor!
-            if (life > 0){
-                life = life-1;
+            if (lives > 0){
+                lives = lives-1;
                 alert("-1 up");
                 document.location.reload();
                 
