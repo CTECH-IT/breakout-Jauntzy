@@ -98,7 +98,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
             dy = -dy;
         } else {//it hit the floor!
             if (lives > 0){
-                lives = lives-1;
+                lives--;
                 alert("-1 up");
                 document.location.reload();
                 clearInterval(interval);
