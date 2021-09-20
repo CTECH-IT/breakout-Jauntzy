@@ -97,8 +97,11 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
         if(x > paddleX && x < paddleX + paddleWidth) {//paddle check
             dy = -dy;
         } else {//it hit the floor!
-        lives--;
-        alert("GAME OVER");
+            if (life > 0){
+                life--;
+                alert("-1 up");
+            }
+        
         document.location.reload();
         clearInterval(interval); //Needed for browser to end game
         }
