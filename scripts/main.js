@@ -103,6 +103,8 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
                 document.location.reload();
                 clearInterval(interval);
             }
+            document.location.reload();
+                clearInterval(interval);
         
          //Needed for browser to end game
         }
