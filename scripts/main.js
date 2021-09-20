@@ -101,7 +101,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
                 lives = lives-1;
                 alert("-1 up");
                 document.location.reload();
-                
+                clearInterval(interval);
             }
             else{
             document.location.reload();
