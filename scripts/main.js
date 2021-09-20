@@ -100,10 +100,11 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
             if (life > 0){
                 life--;
                 alert("-1 up");
+                document.location.reload();
+                clearInterval(interval);
             }
         
-        document.location.reload();
-        clearInterval(interval); //Needed for browser to end game
+         //Needed for browser to end game
         }
     }
 
