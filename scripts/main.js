@@ -106,6 +106,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height)
             else{
             document.location.reload();
             clearInterval(interval);
+            alert("GAMEOVER");
             }
         
          //Needed for browser to end game
